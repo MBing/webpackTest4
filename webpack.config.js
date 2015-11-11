@@ -1,6 +1,8 @@
 var path = require('path'),
 	webpack = require('webpack');
 
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
+
 module.exports = {
 	context: path.resolve('js'),
 	entry: {
